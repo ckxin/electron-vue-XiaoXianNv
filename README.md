@@ -1,6 +1,6 @@
-# electron-learn
+# 小仙女验证系统
 
-> An electron-vue project
+> 一个 electron-vue 项目
 
 
 ### 使用方法
