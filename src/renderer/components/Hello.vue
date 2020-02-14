@@ -30,6 +30,7 @@
 </template>
 
 <script>
+// 这是错误提醒信息，你可以在这里修改
 const info = ["输入的小仙女名字不正确哦~",
               "这可能是其他小仙女的名字哦~",
               "请输入正确的小仙女名字~",
@@ -61,12 +62,13 @@ export default {
       if(this.name === "") {
         this.alertInfo = "姓名不能为空！";
         this.alertFlag = true;
-      } else if(this.name === "李建红") {
+      } else if(this.name === "***") { //这是预设姓名，你可以将***修改为你自己小仙女的名字~
         this.isName = true;
-        this.alertInfo = "小仙女，就是你啦！";
+        this.alertInfo = "小仙女，就是你啦！";  // 这是正确提示信息，可以在此修改
         this.alertFlag = true;
       } else {
-        let idx = Math.floor(Math.random()*8);
+        let infoSize = info.length;
+        let idx = Math.floor(Math.random()*infoSize);
         this.alertInfo = info[idx];
         this.alertFlag = true;
       }
